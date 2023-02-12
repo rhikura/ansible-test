@@ -1,0 +1,10 @@
+---
+- name: "Playing with Ansible and Git"
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Echo something
+    shell: "echo hello"
+    register: message
+  - debug:
+      msg: "{{message.stdout_lines}}"
